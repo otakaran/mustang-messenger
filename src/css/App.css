@@ -1,0 +1,29 @@
+.main {
+    /* background-color: rgb(48, 241, 149); */
+    border-radius: 25px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    width: 75%;
+}
+
+.main-title {
+    font-size: 48px;
+}
+
+.email-form {
+    margin: 20px 0 0 0;
+}
+
+/* Debugging borders */
+/* .main {
+    border: solid red 2px;
+}
+.main-title {
+    border: solid blue 2px;
+}
+.main-body {
+    border: solid green 2px;
+}
+.email-form {
+    border: solid orange 2px;
+} */
