@@ -1,17 +1,28 @@
 .main {
-    /* background-color: rgb(48, 241, 149); */
     border-radius: 25px;
     margin: 20px auto 0 auto;
     text-align: center;
-    width: 75%;
+    width: 50%;
 }
 
 .main-title {
-    font-size: 48px;
+    font-size: 40px;
 }
 
 .email-form {
+    background-color: rgb(140, 250, 200);
+    border-radius: 15px;
+    display: inline-block;
+    font-size: 18px;
     margin: 20px 0 0 0;
+}
+
+.main-title,
+.main-body,
+.email-form {
+    display: inline-block;
+    padding: 20px;
+    width: 80%;
 }
 
 /* Debugging borders */

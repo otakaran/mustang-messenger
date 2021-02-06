@@ -1,4 +1,5 @@
 import './css/App.css';
+import './css/form.css';
 
 function App() {
   return (
@@ -11,11 +12,10 @@ function App() {
         Sign up below with an email to get started today!
         </div>
         <div class="email-form">
-            <label for="signup-email">
-                Enter your email to get started:
-            </label>
-            <form>
-                <input id="signup-email" type="text" placeholder="Enter email here..."></input>
+            Enter your email to get started:
+            <form id="signup-email">
+                <input id="enter-signup-email" type="text" placeholder="Enter email here..." />
+                <input id="go-button-signup-email" type="button" value="Go"/>
             </form>
             Already have an account? Sign up <a href="">here.</a>
         </div>
