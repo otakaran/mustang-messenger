@@ -1,0 +1,49 @@
+.header {
+    border-bottom: solid gray 2px;
+    display: inline-block;
+    height: 100px;
+    position: relative;
+    text-align: center;
+    width: 100vw;
+}
+
+.header-left {
+    float: left;
+    width: 270px;
+}
+
+#banner {
+    height: 100px;
+    margin: 0;
+    vertical-align: bottom;
+}
+
+.header-middle {
+    display: inline-block;
+    font-size: 40px;
+    height: 100%;
+    line-height: 100px;
+    margin: 0 auto;
+}
+
+.header-right {
+    float: right;
+    height: 100%;
+    line-height: 100px;
+    vertical-align: middle;
+    width: 270px;
+}
+
+/* Debugging borders */
+/* .header {
+    border: solid red 2px;
+}
+.header-left {
+    border: solid blue 2px;
+}
+.header-middle {
+    border: solid black 2px;
+}
+.header-right {
+    border: solid green 2px;
+} */
