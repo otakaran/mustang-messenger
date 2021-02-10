@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./css/header.css";
 import banner from "./images/mustang-messenger-banner.png";
 
@@ -5,11 +6,13 @@ function Header() {
   return (
     <div class="header">
       <div class="header-left">
-        <img src={banner} id="banner" />
+        <Link to="/">
+          <img src={banner} id="banner" alt="Mustang Messenger banner" />
+        </Link>
       </div>
       <div class="header-middle">Welcome</div>
       <div class="header-right">
-        <a href="">Sign Up</a> or <a href="">Log In</a>
+        <Link to="/signup">Sign up</Link> or <Link to="/login">Log in</Link>
       </div>
     </div>
   );

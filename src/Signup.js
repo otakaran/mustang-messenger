@@ -5,6 +5,7 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 function Signup() {
   return (
     <Jumbotron>
+      <h2>Sign up for Mustang Messenger</h2>
       <Form>
         <Form.Group controlId="formUsername">
           <Form.Label>Username</Form.Label>
