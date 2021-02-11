@@ -17,11 +17,6 @@ function Login() {
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
 
-        <Form.Group controlId="formPassword2">
-          <Form.Label>Repeat password</Form.Label>
-          <Form.Control type="password" placeholder="Repeat password" />
-        </Form.Group>
-
         <Button variant="primary" type="submit">
           Submit
         </Button>
