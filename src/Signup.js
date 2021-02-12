@@ -1,11 +1,12 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Jumbotron from "react-bootstrap/Jumbotron";
+import "./css/signup.css";
 
 function Signup() {
   return (
-    <Jumbotron>
-      <h2>Sign up for Mustang Messenger</h2>
+    <div className="signup-component">
+      <h2 className="signup-header">Sign up for Mustang Messenger</h2>
       <Form>
         <Form.Group controlId="formUsername">
           <Form.Label>Username</Form.Label>
@@ -27,11 +28,11 @@ function Signup() {
           <Form.Control type="password" placeholder="Repeat password" />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Submit
+        <Button variant="success" type="submit">
+          Sign up
         </Button>
       </Form>
-    </Jumbotron>
+    </div>
   );
 }
 
