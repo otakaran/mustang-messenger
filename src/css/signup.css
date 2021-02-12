@@ -1,0 +1,12 @@
+.signup-component {
+  background-color: rgb(140, 250, 200);
+  border-radius: 5px;
+  margin: 50px auto;
+  padding: 25px;
+  width: 30%;
+}
+
+.signup-header {
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
