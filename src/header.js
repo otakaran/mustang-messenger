@@ -1,20 +1,24 @@
 import { Link } from "react-router-dom";
 import "./css/header.css";
 import banner from "./images/mustang-messenger-banner.png";
+import { Button, Form, FormControl, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 function Header() {
   return (
-    <div class="header">
-      <div class="header-left">
+    <Navbar bg="light" expand="lg">
+      <Navbar.Brand href="#home">
         <Link to="/">
           <img src={banner} id="banner" alt="Mustang Messenger banner" />
         </Link>
-      </div>
-      <div class="header-middle">Welcome</div>
-      <div class="header-right">
-        <Link to="/signup">Sign up</Link> or <Link to="/login">Log in</Link>
-      </div>
-    </div>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto"></Nav>
+        <Nav.Link href="#link">
+          <Link to="/signup">Sign up</Link> or <Link to="/login">Log in</Link>
+        </Nav.Link>
+      </Navbar.Collapse>
+  </Navbar>
   );
 }
 
