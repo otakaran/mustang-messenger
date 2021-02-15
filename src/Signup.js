@@ -1,26 +1,8 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import React from "react";
 import "./css/signup.css";
-
-// Firebase App (the core Firebase SDK) is always required and must be listed first
-import firebase from "firebase/app";
-
-// Add the Firebase products that you want to use
-import "firebase/auth";
-import "firebase/firestore";
-
-// Configuration from Firebase admin console
-const firebaseConfig = {
-  apiKey: "AIzaSyAxFXU07_Qkb8z6NbgOUwwD6ImNtURjX1c",
-  authDomain: "mustang-messenger-41f23.firebaseapp.com",
-  projectId: "mustang-messenger-41f23",
-  storageBucket: "mustang-messenger-41f23.appspot.com",
-  messagingSenderId: "195537124874",
-  appId: "1:195537124874:web:3f3a8cb5da2e739390e9f3"
-};
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+import fire from './Fire.js';
 
 function signUpUserFirebase(event) {
   event.preventDefault();
@@ -28,7 +10,9 @@ function signUpUserFirebase(event) {
   var email = (data.get('email'));
   var password = (data.get('password'));
   var passwordConf = (data.get('passwordConf'));
-  console.log("Doing auth!")
+  console.log("Doing sign up auth!")
+
+  // TODO verify password == passwordConf
 
   // TODO REMOVE THIS XD
   console.log("email: ", email);
@@ -36,14 +20,16 @@ function signUpUserFirebase(event) {
   console.log("passwordConf: ", passwordConf);
   //
 
-  firebase.auth().createUserWithEmailAndPassword(email, password)
+  fire.auth().createUserWithEmailAndPassword(email, password)
   .then((userCredential) => {
     // Signed in
     var user = userCredential.user;
     console.log("Successfully created user account with uid:", user.uid);
     alert("Successfully created user account with uid: " + user.uid);
     // Go to messages now
-    // ...
+    // This isn't the right way of forwarding... 
+    // leaving it for my more React gifted teammates
+    window.location.replace("./MessagePage");
   })
   .catch((error) => {
     var errorCode = error.code;
