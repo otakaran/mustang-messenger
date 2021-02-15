@@ -1,6 +1,5 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Jumbotron from "react-bootstrap/Jumbotron";
 import "./css/signup.css";
 
 function Signup() {
