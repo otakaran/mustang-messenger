@@ -1,4 +1,5 @@
 # Mustang Messenger
+[![Build Status](https://travis-ci.com/otakaran/mustang-messenger.svg?branch=main)](https://travis-ci.com/otakaran/mustang-messenger)
 [![DeepSource](https://deepsource.io/gh/otakaran/mustang-messenger.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/otakaran/mustang-messenger/?ref=repository-badge)
 [![DeepSource](https://deepsource.io/gh/otakaran/mustang-messenger.svg/?label=resolved+issues&show_trend=true)](https://deepsource.io/gh/otakaran/mustang-messenger/?ref=repository-badge)
 ### Otakar Andrysek, Ethan Choi, Andrew Mariano
