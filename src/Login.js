@@ -10,7 +10,7 @@ function Login() {
       <Form onSubmit={logInUserFirebase}>
         <Form.Group controlId="formEmail">
           <Form.Label>Email</Form.Label>
-          <Form.Control type="text" name="email" placeholder="Enter email" />
+          <Form.Control type="email" name="email" placeholder="Enter email" />
         </Form.Group>
 
         <Form.Group controlId="formPassword">
