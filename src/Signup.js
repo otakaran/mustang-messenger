@@ -2,7 +2,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import React from "react";
 import "./css/signup.css";
-import signUpUserFirebase from "./signupFire";
+import signUpUserFirebase from "./fire/signupFire";
 
 function Signup() {
   return (
@@ -11,7 +11,11 @@ function Signup() {
       <Form onSubmit={signUpUserFirebase}>
         <Form.Group controlId="formUsername">
           <Form.Label>Username</Form.Label>
-          <Form.Control type="text" name="username" placeholder="Enter username" />
+          <Form.Control
+            type="text"
+            name="username"
+            placeholder="Enter username"
+          />
         </Form.Group>
 
         <Form.Group controlId="formEmail" id="email">
@@ -21,12 +25,20 @@ function Signup() {
 
         <Form.Group controlId="formPassword" id="password">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" name="password" placeholder="Password" />
+          <Form.Control
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
         </Form.Group>
 
         <Form.Group controlId="formPassword2">
           <Form.Label>Repeat password</Form.Label>
-          <Form.Control type="password" name="passwordConf" placeholder="Repeat password" />
+          <Form.Control
+            type="password"
+            name="passwordConf"
+            placeholder="Repeat password"
+          />
         </Form.Group>
 
         <Button variant="success" type="submit" value="Submit">
