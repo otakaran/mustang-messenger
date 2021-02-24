@@ -1,0 +1,25 @@
+.messaging-component {
+  background-color: rgb(140, 250, 200);
+  border-radius: 5px;
+  bottom: 0;
+  left: 0;
+  margin: 50px auto;
+  padding: 25px;
+  position: absolute;
+  right: 0;
+  width: 50%;
+}
+
+#messageTo {
+  margin: 0 0 0 10px;
+}
+
+#messageBody {
+  display: inline-block;
+  margin: 20px 20px 0 0;
+  width: 80%;
+}
+  
+#sendMessageBtn {
+  display: inline-block;
+}
