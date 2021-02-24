@@ -3,7 +3,6 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import React, { Component } from "react";
 import sendMessageFirebase from "./fire/sendMessageFire";
-import logoutFirebase from "./fire/logoutFire";
 
 class Messaging extends Component {
 

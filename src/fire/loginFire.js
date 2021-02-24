@@ -31,4 +31,5 @@ function logInUserFirebase(event) {
   });
 }
 
+
 export default logInUserFirebase;
