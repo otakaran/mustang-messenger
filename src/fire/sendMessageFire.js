@@ -1,5 +1,5 @@
-import fire from './Fire.js';
-import { getCurrentUserUid } from './userFire.js'
+//import fire from './Fire.js';
+
 
 function sendMessageFirebase(event) {
   // nothing yet

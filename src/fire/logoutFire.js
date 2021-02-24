@@ -1,10 +1,11 @@
 import fire from './Fire.js';
-import getCurrentUserUid from './userFire.js'
+//import getCurrentUserUid from './userFire.js'
 
 function logoutFirebase(event) {
   var uid;
-  uid = getCurrentUserUid();
+  //uid = getCurrentUserUid();
   var user = fire.auth().currentUser;
+  uid = user.uid;
   
   if (user) {
     console.log("User is trying to sign out", uid);

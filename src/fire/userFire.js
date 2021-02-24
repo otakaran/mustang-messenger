@@ -1,4 +1,4 @@
-import fire from './Fire.js';
+/* import fire from './Fire.js';
 
 function getCurrentUserDetails() {
   var user = fire.auth().currentUser;
@@ -14,6 +14,7 @@ function getCurrentUserDetails() {
   // this value to authenticate with your backend server, if
   // you have one. Use User.getToken() instead.
   }
+  return (name, email, photoUrl, emailVerified, uid)
 }
 
 function getCurrentUserUid() {
@@ -29,7 +30,6 @@ function getCurrentUserUid() {
   }
 
   return uid
-}
+} */
 
-export default getCurrentUserUid;
 
