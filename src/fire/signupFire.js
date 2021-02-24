@@ -24,8 +24,7 @@ function signUpUserFirebase(event) {
         console.log("Successfully created user account with uid:", user.uid);
         alert("Successfully created user account with uid: " + user.uid);
         // Go to messages now
-        // This isn't the right way of forwarding...
-        // leaving it for my more React gifted teammates
+        // This might be the right way of forwarding...
         window.location.replace("./messaging");
       })
       .catch((error) => {

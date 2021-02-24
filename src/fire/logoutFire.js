@@ -28,7 +28,8 @@ function logoutFirebase(event) {
   }
 }
 
-//Handle Account Status
+// Handle Account Status
+// I don't know why this makes it work but is does
 fire.auth().onAuthStateChanged(user => {
     if(user) {
     }

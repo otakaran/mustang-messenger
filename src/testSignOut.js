@@ -4,6 +4,7 @@ import React from "react";
 import "./css/signup.css";
 import logoutFirebase from "./fire/logoutFire";
 
+// Testing object, please integrate into frontend components
 function SignOut() {
   return (
     <div className="signup-component">
