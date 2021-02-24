@@ -8,34 +8,38 @@ function signUpUserFirebase(event) {
   var passwordConf = data.get("passwordConf");
   console.log("Doing sign up auth!");
 
-  // TODO verify password == passwordConf
+  if (password === passwordConf) {
+    // TODO REMOVE THIS XD
+    console.log("email: ", email);
+    console.log("password: ", password);
+    console.log("passwordConf: ", passwordConf);
+    //
 
-  // TODO REMOVE THIS XD
-  console.log("email: ", email);
-  console.log("password: ", password);
-  console.log("passwordConf: ", passwordConf);
-  //
+    fire
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed in
+        var user = userCredential.user;
+        console.log("Successfully created user account with uid:", user.uid);
+        alert("Successfully created user account with uid: " + user.uid);
+        // Go to messages now
+        // This might be the right way of forwarding...
+        window.location.replace("./messaging");
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log("Error creating user:", errorCode, errorMessage);
+        alert("Error creating user: [" + errorCode + "]\n" + errorMessage);
+        // User can try again
+      });
+    }
+    else {
+      alert("Error creating user: [-1]\nPasswords do not match.");
+    }
 
-  fire
-    .auth()
-    .createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      // Signed in
-      var user = userCredential.user;
-      console.log("Successfully created user account with uid:", user.uid);
-      alert("Successfully created user account with uid: " + user.uid);
-      // Go to messages now
-      // This isn't the right way of forwarding...
-      // leaving it for my more React gifted teammates
-      window.location.replace("./MessagePage");
-    })
-    .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log("Error creating user:", errorCode, errorMessage);
-      alert("Error creating user: [" + errorCode + "]\n" + errorMessage);
-      // User can try again
-    });
+
 }
 
 export default signUpUserFirebase;
