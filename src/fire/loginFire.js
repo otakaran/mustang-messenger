@@ -21,7 +21,7 @@ function logInUserFirebase(event) {
     // Go to messages now
     // This isn't the right way of forwarding...
     // leaving it for my more React gifted teammates
-    window.location.replace("./MessagePage");
+    window.location.replace("./signout");
   })
   .catch((error) => {
     var errorCode = error.code;
