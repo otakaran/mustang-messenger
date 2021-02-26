@@ -1,3 +1,4 @@
+import Header from '../header.js';
 import fire from './Fire.js';
 //import getCurrentUserUid from './userFire.js'
 
@@ -31,6 +32,8 @@ function logoutFirebase(event) {
 
 // Handle Account Status
 // I don't know why this makes it work but is does
+
+// not sure if I should move this out of this file ?
 fire.auth().onAuthStateChanged(user => {
     var signup_login = document.getElementById("signup-login");
     var logout = document.getElementById("logout");  
@@ -41,6 +44,7 @@ fire.auth().onAuthStateChanged(user => {
     else {
       signup_login.style.display = "inline-block";
       logout.style.display = "none";
+      window.headerComponent.setCenterText("Welcome!");
     }
   });
 

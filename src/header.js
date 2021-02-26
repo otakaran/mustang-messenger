@@ -12,6 +12,7 @@ class Header extends Component {
     this.state = {
       page: "",
     };
+    window.headerComponent = this;
   }
 
   setCenterText = (text) => {
