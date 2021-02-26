@@ -1,4 +1,3 @@
-import Header from '../header.js';
 import fire from './Fire.js';
 //import getCurrentUserUid from './userFire.js'
 
