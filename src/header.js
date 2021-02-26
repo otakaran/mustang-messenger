@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import "./css/header.css";
 import banner from "./images/mustang-messenger-banner.png";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import logoutFirebase from "./fire/logoutFire";
 import React, { Component } from "react";
 
 class Header extends Component {
@@ -26,7 +29,7 @@ class Header extends Component {
           </Link>
         </div>
         <div class="header-middle">{this.state.page}</div>
-        <div class="header-right">
+        <div class="header-right" id="signup-login">
           <Link to="/signup" onClick={() => this.setCenterText("Sign Up")}>
             Sign up
           </Link>{" "}
@@ -34,6 +37,13 @@ class Header extends Component {
           <Link to="/login" onClick={() => this.setCenterText("Log In")}>
             Log in
           </Link>
+        </div>
+        <div class="header-right" id="logout">
+          <Form onSubmit={logoutFirebase}>
+            <Button variant="success" type="submit" value="Submit">
+              Sign out
+            </Button>
+          </Form>
         </div>
       </div>
     );
