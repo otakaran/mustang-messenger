@@ -39,6 +39,7 @@ fire.auth().onAuthStateChanged(user => {
     if(user) {
       signup_login.style.display = "none";
       logout.style.display = "inline-block";
+      window.headerComponent.displayUserID(fire.auth().currentUser.email);
     }
     else {
       signup_login.style.display = "inline-block";

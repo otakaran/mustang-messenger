@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./css/header.css";
 import banner from "./images/mustang-messenger-banner.png";
-import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import logoutFirebase from "./fire/logoutFire";
 import React, { Component } from "react";
@@ -11,6 +10,7 @@ class Header extends Component {
     super(props);
     this.state = {
       page: "",
+      userID: "",
     };
     window.headerComponent = this;
   }
@@ -20,6 +20,12 @@ class Header extends Component {
       page: text,
     });
   };
+
+  displayUserID = (id) => {
+    this.setState({
+      userID: id,
+    })
+  }
 
   render() {
     return (
@@ -40,6 +46,9 @@ class Header extends Component {
           </Link>
         </div>
         <div class="header-right" id="logout">
+          <div class="userID">
+            {this.state.userID}
+          </div>
             <Button variant="success" type="submit" value="Submit" onClick={logoutFirebase}>
               Sign out
             </Button>

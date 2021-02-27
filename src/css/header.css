@@ -1,41 +1,46 @@
 .header {
-    border-bottom: solid gray 2px;
-    display: inline-block;
-    height: 100px;
-    position: relative;
-    text-align: center;
-    width: 100vw;
+  border-bottom: solid gray 2px;
+  display: inline-block;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  width: 100vw;
 }
 
 .header-left {
-    float: left;
-    width: 270px;
+  float: left;
+  width: 270px;
 }
 
 #banner {
-    height: 100px;
-    margin: 0;
-    vertical-align: bottom;
+  height: 100px;
+  margin: 0;
+  vertical-align: bottom;
 }
 
 .header-middle {
-    display: inline-block;
-    font-size: 40px;
-    height: 100%;
-    line-height: 100px;
-    margin: 0 auto;
+  display: inline-block;
+  font-size: 40px;
+  height: 100%;
+  line-height: 100px;
+  margin: 0 auto;
 }
 
 .header-right {
-    float: right;
-    height: 100%;
-    line-height: 100px;
-    vertical-align: middle;
-    width: 270px;
+  float: right;
+  height: 100%;
+  line-height: 100px;
+  vertical-align: middle;
+  width: 270px;
 }
 
 #logout {
   display: none;
+}
+
+.userID {
+  display: inline-block;
+  margin: 0 20px 0 -20px;
 }
 
 /* Debugging borders */
