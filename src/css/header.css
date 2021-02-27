@@ -8,8 +8,10 @@
 }
 
 .header-left {
+  display: inline-block;
   float: left;
-  width: 270px;
+  padding: 0 300px 0 0;
+  width: 570px;
 }
 
 #banner {
