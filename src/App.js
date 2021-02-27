@@ -6,8 +6,6 @@ import Landing from "./landing.js";
 import Signup from "./Signup";
 import Login from "./Login";
 import Messaging from "./Messaging";
-import MessagePage from "./MessagesPage"
-import SignOut from './testSignOut'
 
 function App() {
   return (
@@ -18,8 +16,6 @@ function App() {
         <Route path="/signup" component={Signup} />
         <Route path="/login" component={Login} />
         <Route path="/messaging" component={Messaging} />
-        <Route path="/messages" component={MessagePage} />
-        <Route path="/signout" component={SignOut} />
       </Switch>
     </main>
   );

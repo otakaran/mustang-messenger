@@ -11,7 +11,7 @@ function Signup() {
       <Form onSubmit={signUpUserFirebase}>
         <Form.Group controlId="formUsername">
           <Form.Label>Username</Form.Label>
-          <Form.Control type="email" name="username" placeholder="Enter username" />
+          <Form.Control type="username" name="username" placeholder="Enter username" />
         </Form.Group>
 
         <Form.Group controlId="formEmail" id="email">
