@@ -1,4 +1,4 @@
-import fire from "./Fire.js";
+import {fire} from "./Fire.js";
 
 function signUpUserFirebase(event) {
   event.preventDefault();

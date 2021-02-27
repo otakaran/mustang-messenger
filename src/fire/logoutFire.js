@@ -1,4 +1,4 @@
-import fire from './Fire.js';
+import {fire} from './Fire.js';
 //import getCurrentUserUid from './userFire.js'
 
 function logoutFirebase(event) {
