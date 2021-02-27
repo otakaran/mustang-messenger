@@ -40,11 +40,9 @@ class Header extends Component {
           </Link>
         </div>
         <div class="header-right" id="logout">
-          <Form onSubmit={logoutFirebase}>
-            <Button variant="success" type="submit" value="Submit">
+            <Button variant="success" type="submit" value="Submit" onClick={logoutFirebase}>
               Sign out
             </Button>
-          </Form>
         </div>
       </div>
     );
