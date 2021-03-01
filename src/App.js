@@ -5,20 +5,22 @@ import Header from "./header";
 import Landing from "./landing.js";
 import Signup from "./Signup";
 import Login from "./Login";
-import Messaging from "./Messaging";
+import MessagesPage from "./MessagesPage";
 
-function App() {
-  return (
-    <main>
-      <Header />
-      <Switch>
-        <Route path="/" component={Landing} exact />
-        <Route path="/signup" component={Signup} />
-        <Route path="/login" component={Login} />
-        <Route path="/messaging" component={Messaging} />
-      </Switch>
-    </main>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <main>
+        <Header />
+        <Switch>
+          <Route path="/" component={Landing} exact />
+          <Route path="/signup" component={Signup} />
+          <Route path="/login" component={Login} />
+          <Route path="/messages" component={MessagesPage} />
+        </Switch>
+      </main>
+    );
+  }
 }
 
 export default App;
