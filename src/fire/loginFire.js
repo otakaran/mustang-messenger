@@ -20,7 +20,7 @@ function logInUserFirebase(event) {
     alert("Successfully signed in user account with uid: " + user.uid);
     // Go to messages now
     // This might be the right way of forwarding...
-    window.location.assign("./messaging");
+    window.location.assign("./messages");
   })
   .catch((error) => {
     var errorCode = error.code;

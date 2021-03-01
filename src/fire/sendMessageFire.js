@@ -34,6 +34,8 @@ function sendMessageFirebase(event) {
     })
     .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
+        /* So messages page refreshes */
+        window.location.reload();
     })
     .catch((error) => {
         console.error("Error adding document: ", error);
