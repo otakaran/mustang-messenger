@@ -1,37 +1,60 @@
 import { Link } from "react-router-dom";
 import "./css/header.css";
 import banner from "./images/mustang-messenger-banner.png";
-import React, { Component } from 'react';
+import Button from "react-bootstrap/Button";
+import logoutFirebase from "./fire/logoutFire";
+import React, { Component } from "react";
 
 class Header extends Component {
-  initialState = {
-    page: 'Welcome!',
+  constructor(props) {
+    super(props);
+    this.state = {
+      page: "",
+      userID: "",
+    };
+    window.headerComponent = this;
   }
-
-  state = this.initialState
 
   setCenterText = (text) => {
-      this.setState({
-        ['page']: text,
-      })
+    this.setState({
+      page: text,
+    });
+  };
+
+  displayUserID = (id) => {
+    this.setState({
+      userID: id,
+    })
   }
 
-  render () {
+  render() {
     return (
-        <div class="header">
+      <div class="header">
         <div class="header-left">
-            <Link to="/" onClick={() => this.setCenterText('Welcome!')}>
+          <Link to="/" onClick={() => this.setCenterText("Welcome!")}>
             <img src={banner} id="banner" alt="Mustang Messenger banner" />
-            </Link>
+          </Link>
         </div>
-        <div class="header-middle">
-            {this.state.page}
+        <div class="header-middle">{this.state.page}</div>
+        <div class="header-right" id="signup-login">
+          <Link to="/signup" onClick={() => this.setCenterText("Sign Up")}>
+            Sign up
+          </Link>{" "}
+          or{" "}
+          <Link to="/login" onClick={() => this.setCenterText("Log In")}>
+            Log in
+          </Link>
         </div>
-        <div class="header-right">
-            <Link to="/signup" onClick={() => this.setCenterText('Sign Up')}>Sign up</Link> or <Link to="/login" onClick={() => this.setCenterText('Log In')}>Log in</Link>
+        <div class="header-right" id="logout">
+          <div class="userID">
+            {this.state.userID}
+          </div>
+            <Button variant="success" type="submit" value="Submit" onClick={logoutFirebase}>
+              Sign out
+            </Button>
         </div>
-        </div>
-    )
+      </div>
+    );
   }
 }
 

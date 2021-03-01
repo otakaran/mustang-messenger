@@ -1,4 +1,4 @@
-import fire from './Fire.js';
+import {fire} from './Fire.js';
 
 function logInUserFirebase(event) {
   event.preventDefault();
@@ -7,7 +7,7 @@ function logInUserFirebase(event) {
   var password = (data.get('password'));
   console.log("Doing login auth!")
 
-  // TODO REMOVE THIS XD
+  // TODO REMOVE THIS (Debug)
   console.log("email: ", email);
   console.log("password: ", password);
   //
@@ -19,9 +19,8 @@ function logInUserFirebase(event) {
     // ...
     alert("Successfully signed in user account with uid: " + user.uid);
     // Go to messages now
-    // This isn't the right way of forwarding...
-    // leaving it for my more React gifted teammates
-    window.location.replace("./MessagePage");
+    // This might be the right way of forwarding...
+    window.location.assign("./messaging");
   })
   .catch((error) => {
     var errorCode = error.code;

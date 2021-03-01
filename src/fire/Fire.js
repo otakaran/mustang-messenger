@@ -22,5 +22,9 @@ catch (err) {
     console.error("Firebase initialization error", err.stack);
   }
 }
+
 const fire = firebase;
-export default fire;
+const db = fire.firestore();
+
+
+export {fire, db};

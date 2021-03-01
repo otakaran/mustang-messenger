@@ -5,8 +5,7 @@ import Header from "./header";
 import Landing from "./landing.js";
 import Signup from "./Signup";
 import Login from "./Login";
-import MessagePage from "./MessagesPage"
-
+import Messaging from "./Messaging";
 
 function App() {
   return (
@@ -16,7 +15,7 @@ function App() {
         <Route path="/" component={Landing} exact />
         <Route path="/signup" component={Signup} />
         <Route path="/login" component={Login} />
-        <Route path="/messages" component={MessagePage} />
+        <Route path="/messaging" component={Messaging} />
       </Switch>
     </main>
   );
