@@ -9,7 +9,7 @@ class Messaging extends Component {
     render() {
         return (
           <div class="messaging-component">
-            <Form onSubmit={sendMessageFirebase}>
+            <Form id= "messageForm" onSubmit={sendMessageFirebase}>
               <label for="messageTo">To:</label>
               <input type="text" id="messageTo" name="messageTo" placeholder="Enter username here..." />
 
