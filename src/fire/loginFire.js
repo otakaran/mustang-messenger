@@ -1,4 +1,4 @@
-import fire from './Fire.js';
+import {fire} from './Fire.js';
 
 function logInUserFirebase(event) {
   event.preventDefault();
@@ -20,7 +20,7 @@ function logInUserFirebase(event) {
     alert("Successfully signed in user account with uid: " + user.uid);
     // Go to messages now
     // This might be the right way of forwarding...
-    window.location.replace("./messaging");
+    window.location.assign("./messaging");
   })
   .catch((error) => {
     var errorCode = error.code;

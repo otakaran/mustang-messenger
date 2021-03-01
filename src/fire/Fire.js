@@ -23,6 +23,8 @@ catch (err) {
   }
 }
 
-
 const fire = firebase;
-export default fire;
+const db = fire.firestore();
+
+
+export {fire, db};
