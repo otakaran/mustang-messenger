@@ -25,7 +25,7 @@ function signUpUserFirebase(event) {
         alert("Successfully created user account with uid: " + user.uid);
         // Go to messages now
         // This might be the right way of forwarding...
-        window.location.replace("./messaging");
+        window.location.replace("./messages");
       })
       .catch((error) => {
         var errorCode = error.code;
