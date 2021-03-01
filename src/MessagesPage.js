@@ -1,15 +1,30 @@
 import React from "react";
-import { receiveAllMessages } from "./fire/receiveMessages";
+import { db } from "./fire/Fire.js"
 import MessageViewer from "./MessageViewer";
 import Messaging from "./Messaging";
 
 class MessagesPage extends React.Component {
-  render() {
-    let messages = receiveAllMessages();
+  constructor() {
+    super();
+    this.state = {
+      messages: [],
+    };
+  }
 
+  componentDidMount() {
+    db.collection("messages").get().then((querySnapshot) => (
+      querySnapshot.forEach((doc) => {
+        this.setState((prevState) => ({
+          messages: [...prevState.messages, doc.data()]
+        })
+      )})
+    ))
+  }
+
+  render() {
     return (
       <div class="messages-page">
-        <MessageViewer messages={messages} />
+        <MessageViewer messages={this.state.messages} />
         <Messaging />
       </div>
     )
