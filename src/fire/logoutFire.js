@@ -40,11 +40,13 @@ fire.auth().onAuthStateChanged(user => {
       signup_login.style.display = "none";
       logout.style.display = "inline-block";
       window.headerComponent.displayUserID(fire.auth().currentUser.email);
+      window.headerComponent.setUserStatus(true);
     }
     else {
       signup_login.style.display = "inline-block";
       logout.style.display = "none";
       window.headerComponent.setCenterText("Welcome!");
+      window.headerComponent.setUserStatus(false);
     }
   });
 

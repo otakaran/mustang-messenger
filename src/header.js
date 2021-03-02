@@ -11,9 +11,16 @@ class Header extends Component {
     this.state = {
       page: "",
       userID: "",
+      loggedIn: false,
     };
     window.headerComponent = this;
   }
+
+  setUserStatus = (status) => {
+    this.setState({
+      loggedIn: status,
+    })
+  };
 
   setCenterText = (text) => {
     this.setState({
@@ -28,13 +35,24 @@ class Header extends Component {
   }
 
   render() {
+    let bannerStatus;
+    if(this.state.loggedIn) {
+      bannerStatus =
+      <div class="header-left">
+          <img src={banner} id="banner" alt="Mustang Messenger banner" />
+      </div>;
+    }
+    else {
+      bannerStatus = 
+      <div class="header-left">
+        <Link to="/" onClick={() => this.setCenterText("Welcome!")}>
+          <img src={banner} id="banner" alt="Mustang Messenger banner" />
+        </Link>
+      </div>;
+    }
     return (
       <div class="header">
-        <div class="header-left">
-          <Link to="/" onClick={() => this.setCenterText("Welcome!")}>
-            <img src={banner} id="banner" alt="Mustang Messenger banner" />
-          </Link>
-        </div>
+        {bannerStatus}
         <div class="header-middle">{this.state.page}</div>
         <div class="header-right" id="signup-login">
           <Link to="/signup" onClick={() => this.setCenterText("Sign Up")}>
