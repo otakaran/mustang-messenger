@@ -36,9 +36,11 @@
   width: 570px;
 }
 
+/*
 #logout {
   display: none;
 }
+*/
 
 .userID {
   display: inline-block;
