@@ -4,23 +4,34 @@ import banner from "./images/mustang-messenger-banner.png";
 import Button from "react-bootstrap/Button";
 import logoutFirebase from "./fire/logoutFire";
 
-const Header = ({ page, userID }) => {
+const Header = ({ userID }) => {
   const location = useLocation();
+
+  const setHeaderText = () => {
+    if (location.pathname === "/signup") {
+      return "Sign up";
+    } else if (location.pathname === "/login") {
+      return "Log in";
+    }
+    else {
+      return "Mustang Messenger";
+    }
+  };
 
   return (
     <div class="header">
       <div class="header-left">
-        <Link to="/" onClick={() => this.setCenterText("Welcome!")}>
+        <Link to="/">
           <img src={banner} id="banner" alt="Mustang Messenger banner" />
         </Link>
       </div>
-      <div class="header-middle">{page}</div>
+      <div class="header-middle">{setHeaderText()}</div>
       <div class="header-right" id="signup-login">
-        <Link to="/signup" onClick={() => this.setCenterText("Sign Up")}>
+        <Link to="/signup">
           Sign up
         </Link>{" "}
         or{" "}
-        <Link to="/login" onClick={() => this.setCenterText("Log In")}>
+        <Link to="/login">
           Log in
         </Link>
       </div>
@@ -37,7 +48,7 @@ const Header = ({ page, userID }) => {
       </div>
     </div>
   );
-}
+};
 
 // class Header extends Component {
 //   constructor(props) {
