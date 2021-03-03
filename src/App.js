@@ -33,13 +33,7 @@ const App = () => {
         <Route path="/" component={Landing} exact />
         <Route path="/signup" component={Signup} exact />
         <Route path="/login" component={Login} exact />
-
-        {/* <Switch>
-        <Route path="/" component={Landing} exact />
-        <Route path="/signup" component={Signup} />
-        <Route path="/login" component={Login} />
-        <Route path="/messages" component={MessagesPage} />
-        </Switch> */}
+        <Route path="/messages" component={MessagesPage} exact />
       </main>
     </BrowserRouter>
   );

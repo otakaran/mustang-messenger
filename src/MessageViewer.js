@@ -1,11 +1,11 @@
 import React from "react";
 
-const MessageViewer = (props) => {
+const MessageViewer = ({ messages }) => {
   return (
     <div class="message-viewer">
       <h1>All Messages</h1>
       <ul>
-        {props.messages.map((msg) => {
+        {messages.map((msg) => {
           return (
             <li key={msg.id}>
               <h3>{msg.from}</h3>
