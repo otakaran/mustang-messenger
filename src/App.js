@@ -1,26 +1,42 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import { fire } from "./fire/Fire";
 import "./css/App.css";
-import Header from "./header";
-import Landing from "./landing.js";
+import Header from "./Header";
+import Landing from "./Landing";
 import Signup from "./Signup";
 import Login from "./Login";
 import MessagesPage from "./MessagesPage";
 
-class App extends React.Component {
-  render() {
-    return (
+const App = () => {
+  const [currentUserEmail, setCurrentUserEmail] = useState("");
+
+  // Stuff that happens when App gets rendered (I think.)
+  useEffect(() => {
+    // Check if user is logged in
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        console.log("Holy shit we're logged in");
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        setCurrentUserEmail(user.email);
+      } else {
+        // User is signed out
+      }
+    });
+  });
+
+  return (
+    <BrowserRouter>
       <main>
-        <Header />
-        <Switch>
-          <Route path="/" component={Landing} exact />
-          <Route path="/signup" component={Signup} />
-          <Route path="/login" component={Login} />
-          <Route path="/messages" component={MessagesPage} />
-        </Switch>
+        <Header userID={currentUserEmail} />
+        <Route path="/" component={Landing} exact />
+        <Route path="/signup" component={Signup} exact />
+        <Route path="/login" component={Login} exact />
+        <Route path="/messages" component={MessagesPage} exact />
       </main>
-    );
-  }
-}
+    </BrowserRouter>
+  );
+};
 
 export default App;
