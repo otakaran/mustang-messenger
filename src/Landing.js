@@ -15,13 +15,13 @@ const Landing = () => {
           This application features unique user accounts and the ability to message other users.
           All you need is an email and password, and you, too can send and receive messages with other users of the platform!
           <br/><br/>
-          Sign up with an email to get started today!
+          <Link to="/signup">
+            Sign up with an email to get started today!
+          </Link>
           <br/><br/><br/>
           ~~~
         </div>
         <div className="main-body-bottom">
-          <br />
-          Need an account? Sign up <Link to="/signup">here.</Link>
           <br />
           Already have an account? Log in <Link to="/login">here.</Link>
         </div>
