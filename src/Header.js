@@ -25,7 +25,7 @@ const Header = ({ userID, handleSignout }) => {
     }
   };
 
-  if(userID == "") {
+  if(userID === "") {
     bannerComponent = 
       <Link to="/">
         <img src={banner} id="banner" alt="Mustang Messenger banner" />
