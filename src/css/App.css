@@ -6,23 +6,27 @@
 }
 
 .main-title {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .email-form {
     background-color: rgb(140, 250, 200);
     border-radius: 15px;
     display: inline-block;
-    font-size: 18px;
+    font-size: 20px;
+    height: 60vh;
     margin: 20px 0 0 0;
+    padding: 40px;
+    position: relative;
+    text-align: center;
+    width: 100%;
 }
 
-.main-title,
-.main-body,
-.email-form {
-    display: inline-block;
-    padding: 20px;
-    width: 80%;
+.main-body-bottom {
+  bottom: 40px;
+  left: 0;
+  position: absolute;
+  right: 0;
 }
 
 /* Debugging borders */
