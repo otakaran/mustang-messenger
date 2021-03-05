@@ -11,6 +11,19 @@ import MessagesPage from "./MessagesPage";
 const App = () => {
   const [currentUserEmail, setCurrentUserEmail] = useState("");
 
+  const handleSignout = (event) => {
+    event.preventDefault();
+    fire
+      .auth()
+      .signOut()
+      .then(() => {
+        setCurrentUserEmail("");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   // Stuff that happens when App gets rendered (I think.)
   useEffect(() => {
     // Check if user is logged in
@@ -29,7 +42,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <main>
-        <Header userID={currentUserEmail} />
+        <Header userID={currentUserEmail} handleSignout={handleSignout} />
         <Route path="/" component={Landing} exact />
         <Route path="/signup" component={Signup} exact />
         <Route path="/login" component={Login} exact />
