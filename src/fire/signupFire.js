@@ -24,15 +24,10 @@ async function signUpUserFirebase(event) {
         var user = userCredential.user;
         
         // Create a new user in the db as well
-        create_user_in_db((user, username)
-        .then((user) => {
-          console.log("Successfully created user account with uid:", user.uid);
-          alert("Successfully created user account with uid: " + user.uid);
-          window.location.replace("./messages");
-        }));
-        
+        create_user_in_db(user, username)
+        console.log("Successfully created user account with uid:", user.uid);
+        alert("Successfully created user account with uid: " + user.uid);
 
-        
       })
       .catch((error) => {
         var errorCode = error.code;
@@ -59,6 +54,7 @@ function create_user_in_db(user, user_name) {
   })
   .then(() => {
     console.log("Document written.");
+    window.location.replace("./messages"); 
   })
   .catch((error) => {
       console.error("Error adding document: ", error);
