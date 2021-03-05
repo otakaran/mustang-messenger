@@ -45,7 +45,8 @@ export function create_user_in_db(user, user_name) {
     email: fire.auth().currentUser.email,
     last_login: fire.firestore.FieldValue.serverTimestamp(),
     uid: user.uid,
-    username: user_name
+    username: user_name,
+    contacts: [],
   })
   .then(() => {
     console.log("Document written.");

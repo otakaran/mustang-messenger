@@ -6,6 +6,7 @@ import Landing from "./Landing";
 import Signup from "./Signup";
 import Login from "./Login";
 import MessagesPage from "./MessagesPage";
+import Contacts from "./Contacts";
 import PrivateRoute from "./PrivateRoute";
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/signup" component={Signup} exact />
           <Route path="/login" component={Login} exact />
           <PrivateRoute path="/messages" component={MessagesPage} />
+          <PrivateRoute path="/contacts" component={Contacts} />
       </Router>
     </AuthProvider>
   );
