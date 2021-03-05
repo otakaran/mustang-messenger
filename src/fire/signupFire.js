@@ -14,7 +14,6 @@ async function signUpUserFirebase(event) {
     console.log("email: ", email);
     console.log("password: ", password);
     console.log("passwordConf: ", passwordConf);
-    //
 
     fire
       .auth()
@@ -23,10 +22,9 @@ async function signUpUserFirebase(event) {
         // Signed up successfully
         var user = userCredential.user;
         
-        // Create a new user in the db as well
+        // Create a new user in the db as well, it will forward the user when done
         create_user_in_db(user, username)
         console.log("Successfully created user account with uid:", user.uid);
-        alert("Successfully created user account with uid: " + user.uid);
 
       })
       .catch((error) => {
@@ -36,8 +34,6 @@ async function signUpUserFirebase(event) {
         alert("Error creating user: [" + errorCode + "]\n" + errorMessage);
         // User can try again
       });
-
-
     }
     else {
       alert("Error creating user: [-1]\nPasswords do not match.");
