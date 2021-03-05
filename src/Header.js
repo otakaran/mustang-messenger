@@ -2,7 +2,6 @@ import { Link, useLocation } from "react-router-dom";
 import "./css/header.css";
 import banner from "./images/mustang-messenger-banner.png";
 import Button from "react-bootstrap/Button";
-import logoutFirebase from "./fire/logoutFire";
 
 const SignupLogin = () => {
   return (
@@ -12,23 +11,7 @@ const SignupLogin = () => {
   );
 };
 
-const SignedinLogout = ({ userID }) => {
-  return (
-    <div className="signedin-logout">
-      {userID}{" "}
-      <Button
-        variant="success"
-        type="submit"
-        value="Submit"
-        onClick={logoutFirebase}
-      >
-        Sign out
-      </Button>
-    </div>
-  );
-};
-
-const Header = ({ userID }) => {
+const Header = ({ userID, handleSignout }) => {
   const location = useLocation();
 
   const setHeaderText = () => {
@@ -50,7 +33,21 @@ const Header = ({ userID }) => {
       </div>
       <div class="header-middle">{setHeaderText()}</div>
       <div class="header-right" id="signup-login">
-        {userID === "" ? <SignupLogin /> : <SignedinLogout userID={userID} />}
+        {userID === "" ? (
+          <SignupLogin />
+        ) : (
+          <div className="signedin-logout">
+            {userID}{" "}
+            <Button
+              variant="success"
+              type="submit"
+              value="Submit"
+              onClick={handleSignout}
+            >
+              <Link className="signout-button" to="/">Sign out</Link>
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );
