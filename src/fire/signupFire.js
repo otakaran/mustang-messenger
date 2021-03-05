@@ -1,9 +1,10 @@
-import {fire} from "./Fire.js";
+import {fire, db} from "./Fire.js";
 
-function signUpUserFirebase(event) {
+async function signUpUserFirebase(event) {
   event.preventDefault();
   const data = new FormData(event.target);
   var email = data.get("email");
+  var username = data.get("username");
   var password = data.get("password");
   var passwordConf = data.get("passwordConf");
   console.log("Doing sign up auth!");
@@ -19,13 +20,19 @@ function signUpUserFirebase(event) {
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
-        // Signed in
+        // Signed up successfully
         var user = userCredential.user;
-        console.log("Successfully created user account with uid:", user.uid);
-        alert("Successfully created user account with uid: " + user.uid);
-        // Go to messages now
-        // This might be the right way of forwarding...
-        window.location.replace("./messages");
+        
+        // Create a new user in the db as well
+        create_user_in_db((user, username)
+        .then((user) => {
+          console.log("Successfully created user account with uid:", user.uid);
+          alert("Successfully created user account with uid: " + user.uid);
+          window.location.replace("./messages");
+        }));
+        
+
+        
       })
       .catch((error) => {
         var errorCode = error.code;
@@ -34,12 +41,28 @@ function signUpUserFirebase(event) {
         alert("Error creating user: [" + errorCode + "]\n" + errorMessage);
         // User can try again
       });
+
+
     }
     else {
       alert("Error creating user: [-1]\nPasswords do not match.");
     }
+}
 
-
+function create_user_in_db(user, user_name) {
+  console.log("Sending the user into db...")
+  db.collection("user_profiles").doc(user.email).set({
+    email: fire.auth().currentUser.email,
+    last_login: fire.firestore.FieldValue.serverTimestamp(),
+    uid: user.uid,
+    username: user_name
+  })
+  .then(() => {
+    console.log("Document written.");
+  })
+  .catch((error) => {
+      console.error("Error adding document: ", error);
+  });
 }
 
 export default signUpUserFirebase;

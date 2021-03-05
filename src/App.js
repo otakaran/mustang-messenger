@@ -16,7 +16,7 @@ const App = () => {
     // Check if user is logged in
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
-        console.log("Holy shit we're logged in");
+        console.log("We're logged in");
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/firebase.User
         setCurrentUserEmail(user.email);
