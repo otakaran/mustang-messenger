@@ -14,11 +14,20 @@ const SignupLogin = () => {
   );
 };
 
+const BannerComponent = () => {
+  return (
+    <Link to="/">
+      <img src={banner} id="banner" alt="Mustang Messenger banner" />
+    </Link>
+  );
+}
+
 const Header = () => {
   const [error, setError] = useState("");
   const location = useLocation();
   const history = useHistory();
   const { currentUser, logout } = useAuth();
+  let bannerComponent;
 
   const setHeaderText = () => {
     if (location.pathname === "/signup") {
@@ -42,11 +51,13 @@ const Header = () => {
   }
 
   return (
-    <div className="header">
-      <div className="header-left">
-        <Link to="/">
+    <div class="header">
+      <div class="header-left">
+        {currentUser ? 
           <img src={banner} id="banner" alt="Mustang Messenger banner" />
-        </Link>
+          :
+          <BannerComponent />
+        }
       </div>
       <div className="header-middle">{setHeaderText()}</div>
       <div className="header-right" id="signup-login">
