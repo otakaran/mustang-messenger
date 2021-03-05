@@ -35,16 +35,18 @@ function logoutFirebase(event) {
 // not sure if I should move this out of this file ?
 // fire.auth().onAuthStateChanged(user => {
 //     var signup_login = document.getElementById("signup-login");
-//     var logout = document.getElementById("logout");
+//     var logout = document.getElementById("logout");  
 //     if(user) {
 //       signup_login.style.display = "none";
 //       logout.style.display = "inline-block";
 //       window.headerComponent.displayUserID(fire.auth().currentUser.email);
+//       window.headerComponent.setUserStatus(true);
 //     }
 //     else {
 //       signup_login.style.display = "inline-block";
 //       logout.style.display = "none";
 //       window.headerComponent.setCenterText("Welcome!");
+//       window.headerComponent.setUserStatus(false);
 //     }
 //   });
 
