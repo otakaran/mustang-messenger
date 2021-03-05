@@ -1,16 +1,14 @@
+import Message from "./Message";
 import "./css/message.css";
 
 const MessageViewer = ({ messages }) => {
   return (
     <div className="message-viewer container">
-      <h1>All Messages</h1>
-      {messages.map((msg) => {
+      <h1 className="messages-header">All Messages</h1>
+      {messages.map((msg, index) => {
         return (
-          <div className="message" id={msg.id}>
-            <h3>{msg.from}</h3>
-            <p>{msg.message}</p>
-          </div>
-        )
+          <Message msg={msg} index={index} />
+        );
       })}
     </div>
   );
