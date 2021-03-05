@@ -1,54 +1,24 @@
-import { useState, useEffect } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import { fire } from "./fire/Fire";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./css/App.css";
+import { AuthProvider } from "./fire/AuthContext";
 import Header from "./Header";
 import Landing from "./Landing";
 import Signup from "./Signup";
 import Login from "./Login";
 import MessagesPage from "./MessagesPage";
+import PrivateRoute from "./PrivateRoute";
 
 const App = () => {
-  const [currentUserEmail, setCurrentUserEmail] = useState("");
-
-  const handleSignout = (event) => {
-    event.preventDefault();
-    fire
-      .auth()
-      .signOut()
-      .then(() => {
-        setCurrentUserEmail("");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
-
-  // Stuff that happens when App gets rendered (I think.)
-  useEffect(() => {
-    // Check if user is logged in
-    fire.auth().onAuthStateChanged((user) => {
-      if (user) {
-        console.log("We're logged in");
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/firebase.User
-        setCurrentUserEmail(user.email);
-      } else {
-        // User is signed out
-      }
-    });
-  });
-
   return (
-    <BrowserRouter>
-      <main>
-        <Header userID={currentUserEmail} handleSignout={handleSignout} />
-        <Route path="/" component={Landing} exact />
-        <Route path="/signup" component={Signup} exact />
-        <Route path="/login" component={Login} exact />
-        <Route path="/messages" component={MessagesPage} exact />
-      </main>
-    </BrowserRouter>
+    <AuthProvider>
+      <Router>
+          <Header />
+          <Route path="/" component={Landing} exact />
+          <Route path="/signup" component={Signup} exact />
+          <Route path="/login" component={Login} exact />
+          <PrivateRoute path="/messages" component={MessagesPage} />
+      </Router>
+    </AuthProvider>
   );
 };
 

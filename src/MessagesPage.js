@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { db } from "./fire/Fire.js";
+import { useAuth } from "./fire/AuthContext";
 import MessageViewer from "./MessageViewer";
 import Messaging from "./Messaging";
 
 const MessagesPage = () => {
+  const { currentUser } = useAuth();
   const [messagesList, setMessagesList] = useState([]);
 
   useEffect(() => {
