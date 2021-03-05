@@ -1,19 +1,15 @@
-import React from "react";
+import Message from "./Message";
+import "./css/message.css";
 
-const MessageViewer = (props) => {
+const MessageViewer = ({ messages }) => {
   return (
-    <div class="message-viewer">
-      <h1>All Messages</h1>
-      <ul>
-        {props.messages.map((msg) => {
-          return (
-            <li key={msg.id}>
-              <h3>{msg.from}</h3>
-              <p>{msg.message}</p>
-            </li>
-          );
-        })}
-      </ul>
+    <div className="message-viewer container">
+      <h1 className="messages-header">All Messages</h1>
+      {messages.map((msg, index) => {
+        return (
+          <Message msg={msg} index={index} />
+        );
+      })}
     </div>
   );
 };

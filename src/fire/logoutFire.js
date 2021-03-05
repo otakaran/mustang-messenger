@@ -6,7 +6,7 @@ function logoutFirebase(event) {
   //uid = getCurrentUserUid();
   var user = fire.auth().currentUser;
   uid = user.uid;
-  
+
   if (user) {
     console.log("User is trying to sign out", uid);
     alert("User [" + uid + "] is trying to sign out")
@@ -33,6 +33,7 @@ function logoutFirebase(event) {
 // I don't know why this makes it work but is does
 
 // not sure if I should move this out of this file ?
+<<<<<<< HEAD
 fire.auth().onAuthStateChanged(user => {
     var signup_login = document.getElementById("signup-login");
     var logout = document.getElementById("logout");  

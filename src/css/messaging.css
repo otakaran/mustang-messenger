@@ -3,9 +3,8 @@
   border-radius: 5px;
   bottom: 0;
   left: 0;
-  margin: 50px auto;
+  margin: 1.5rem auto;
   padding: 25px;
-  position: absolute;
   right: 0;
   width: 50%;
 }
@@ -19,7 +18,7 @@
   margin: 20px 20px 0 0;
   width: 80%;
 }
-  
+
 #sendMessageBtn {
   display: inline-block;
 }

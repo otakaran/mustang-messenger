@@ -36,8 +36,19 @@
   width: 570px;
 }
 
+/*
 #logout {
   display: none;
+}
+*/
+
+.signout-button {
+  color: white;
+}
+
+.signout-button:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .userID {
