@@ -18,15 +18,21 @@ const MessageViewer = ({ contact }) => {
     );
   }
 
+  function filterMyMessages(msg) {
+    return msg.to === currentUser.email || msg.from === currentUser.email;
+  }
+
   let [messages] = useCollectionData(query, { idField: "id" });
 
   if (messages && contact) {
     messages = messages.filter(filterContact);
+  } else if (messages) {
+    messages = messages.filter(filterMyMessages);
   }
 
   return (
     <div className="message-viewer container">
-      <br/>
+      <br />
       <div>
         <Link to="/contacts">
           <Button id="returnToContacts" type="submit" value="Submit">
@@ -34,7 +40,7 @@ const MessageViewer = ({ contact }) => {
           </Button>
         </Link>
       </div>
-      <h1 className="messages-header">All Messages</h1>
+      <h1 className="messages-header">Messages</h1>
       {messages &&
         messages.map((msg) => {
           return <Message msg={msg} key={msg.id} />;
