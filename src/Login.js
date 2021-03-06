@@ -22,8 +22,8 @@ function Login() {
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
       history.push("/messages");
-    } catch {
-      setError("Failed to log in");
+    } catch (error) {
+      setError(error.message);
     }
 
     setLoading(false);
