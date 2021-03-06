@@ -5,12 +5,3 @@ install:
 - npm install
 script:
 - npm run build
-deploy:
-  provider: heroku
-  api_key:
-    secure: KzyptpHg/vIzgyp/3p2YxMCUXe4XnCpE88PEKtyzfhwSz1OU2NEhmdD7lcsuaEljq8ukg7zYKC5f9dSgT/2IrSFCS60lkZtH8SqInoo99yEcvDPAkkCXvRdKKIZCVqAM0FmZq31Pz7z1vtb6UgBP5KlJ+M5jJSEhW/4WTPMZQ97GhDNbWpxxJwSRz0cOJyx5Ba9Yuc0xiI2CA/4xrl8gAaNCdzyN+KdGxDNZOzdQOy/TX/8xIn5L0rSrn+cpV/CfCQI6cAl2uaLSDKfvGDX/vdbaBD9mLKgQ8R3VnFTfjh9PAq7blJelFnwRvr/Z80sJm9qJ1Wb38hBWiLRVuXth8TNz7jR3EKZyPpOd0RRwYC419TwE0/AfKKWk27AHdojak8xJsWEp0JOUl2CSe8w2ob1WJ7ssUAh+d/n1n+tehm++xfX3jMBurJ1G40YSqpjNXAIrFuD4/KlCnX1wswqk+OfvGqung0gIs7Ie6MCHTZ1WKP/EbT9yja165HRyww269TmBKwBXcKOpWSahjVLHIv5E/9j/BOQHRDgA1ZLw6gn33b4Aq3HUkHQi9oultGIaIbwDZh3I6glgvoUq+23JqzeBqh/rFsaD8gXFoIxzgnp+EF+lb5gabDzuWnsKKwnBQNc5fOF0/rRduJ3rm4OxS7Vj5yoZ8mtVqVI7YTqYwIc=
-  app: quiet-brushlands-08770
-  on:
-    repo: otakaran/mustang-messenger
-    branch: db-crud-contacts-list
-  skip_cleanup: 'true'
