@@ -1,10 +1,16 @@
 language: node_js
-
 node_js:
-  - "14"
-
+- '14'
 install:
-  - npm install
-
+- npm install
 script:
-  - npm run build
+- npm run build
+deploy:
+  provider: heroku
+  api_key:
+    secure: TTrm7Cjl1Vg1jR1i1U1KOxZGVaHQttuqDWb/4aDguLYDR5mGnX0dCrpmaESoKJQ934hTrbFpVtJeke2YmYboP3sNjnw9P3KtSTgIG9uuya4e377/68bAi5wkhc3X/32/fJ7METtwiKa1iLOdvMVbpf7ys/lsfs/taV7BchPfhdddfXl+gKHc4kgB+PIxshX7RkeG0PK2Ygd7xHtaaJPC9O6VBmBJAC3w3x2viiiuGalU4CQYoUVcjVxTwxMGMmwuFG1eySz2vHIMPZY8iGont3h/kiTEynbeA4RZyhsr8n3drav1T/+kq/3GCley3k+qg98nbjyfTYJR2gALaK2K7fkOvQXeREKmjyZ5nPSc2crxhHD7okFGnghW9HXrLtmZFfOfPnyM+A/rfJFOepniYMfD/e+LLvmwGjwxvCGDDQE9g1F0R5FUcvM+tK/REe6zVhh93P5Fmgdey5TNjYCdDzai1+k5Pktsfap5Dp3KL0QoxUPHacbWQa1QFctsScfHr0sdi8KWElIHTSIiVK+d8ks/53rQ3NiTnJ3L047v8jSaZum2MdIrlAdoBNhnVqsqnSY2JlXwfeph9FPakc4qmCVKPU+C24+r9281hVcjph8v7PzATOC34wSVzbyiy0Y1hsa/vDWboTqLDomTsYd1AfZZsganO3nDr5dz8Sv/C8c=
+  app: mustang-messenger
+  on:
+    repo: otakaran/mustang-messenger
+    branch: db-crud-contacts-list
+  skip_cleanup: 'true'
