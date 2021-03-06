@@ -27,7 +27,6 @@ const Header = () => {
   const location = useLocation();
   const history = useHistory();
   const { currentUser, logout } = useAuth();
-  let bannerComponent;
 
   const setHeaderText = () => {
     if (location.pathname === "/signup") {
