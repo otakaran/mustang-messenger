@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { fire } from "./Fire";
-import { create_user_in_db } from "./signupFire";
-
+import { create_user_in_db } from "./userProfiles";
 const AuthContext = React.createContext();
 
 export function useAuth() {
