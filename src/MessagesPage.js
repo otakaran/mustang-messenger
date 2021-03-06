@@ -13,7 +13,7 @@ const MessagesPage = () => {
         <MessageViewer contact={match.params.contact} /> :
         <MessageViewer />
       }
-      <Messaging />
+      <Messaging contact={match.params.contact}/>
     </div>
   );
 };

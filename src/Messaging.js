@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import sendMessageFirebase from "./fire/sendMessageFire";
 
-const Messaging = () => {
+const Messaging = ({ contact }) => {
   return (
     <div class="messaging-component">
       <Form id="messageForm" onSubmit={sendMessageFirebase}>
@@ -13,6 +13,7 @@ const Messaging = () => {
           id="messageTo"
           name="messageTo"
           placeholder="Enter username here..."
+          value={contact}
         />
 
         <input
