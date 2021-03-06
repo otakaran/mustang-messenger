@@ -1,5 +1,7 @@
 import { db } from "./fire/Fire";
 import { useAuth } from "./fire/AuthContext";
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 import Message from "./Message";
 import "./css/message.css";
 import { useCollectionData } from "react-firebase-hooks/firestore";
@@ -24,6 +26,14 @@ const MessageViewer = ({ contact }) => {
 
   return (
     <div className="message-viewer container">
+      <br/>
+      <div>
+        <Link to="/contacts">
+          <Button id="returnToContacts" type="submit" value="Submit">
+            Return to Contacts
+          </Button>
+        </Link>
+      </div>
       <h1 className="messages-header">All Messages</h1>
       {messages &&
         messages.map((msg) => {
