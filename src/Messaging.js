@@ -4,22 +4,6 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import sendMessageFirebase from "./fire/sendMessageFire";
 
-// const messageToDefault = () => {
-//   return (
-//     <div>
-//       <label htmlFor="messageTo">To:</label>
-//       <input
-//         type="text"
-//         id="messageTo"
-//         name="messageTo"
-//         placeholder="Enter username here..."
-//       />
-//     </div>
-//   );
-// }
-
-
-
 const Messaging = ({ contact }) => {
   const location = useLocation();
   console.log("LOCATION.PATHNAME: " + location.pathname)
