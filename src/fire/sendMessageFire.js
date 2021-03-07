@@ -40,7 +40,7 @@ function sendMessageFirebase(event) {
             contacts: fire.firestore.FieldValue.arrayUnion(messageTo)
           })
 
-      
+
           // Send message into the db
           db.collection("messages").add({
             from: fire.auth().currentUser.email,
@@ -51,7 +51,6 @@ function sendMessageFirebase(event) {
           .then((toUserRef) => {
               console.log("Document written with ID: ", toUserRef.id);
               /* So messages page refreshes */
-              window.location.reload();
           })
           .catch((error) => {
               console.error("Error adding document: ", error);

@@ -1,24 +1,19 @@
-import { useState, useEffect } from "react";
-import { db } from "./fire/Fire.js";
+import { useRouteMatch } from "react-router";
 import MessageViewer from "./MessageViewer";
 import Messaging from "./Messaging";
 
 const MessagesPage = () => {
-  const [messagesList, setMessagesList] = useState([]);
-
-  useEffect(() => {
-    db.collection("messages").get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        console.log(doc.data());
-        setMessagesList(messagesList => [...messagesList, doc.data()]);
-      })
-    })
-  }, []);
+  let match = useRouteMatch();
+  console.log("match: ", match);
+  console.log("contact: ", match.params.contact);
 
   return (
     <div className="messages-page">
-      <MessageViewer messages={messagesList} />
-      <Messaging />
+      { match.params.contact ?
+        <MessageViewer contact={match.params.contact} /> :
+        <MessageViewer />
+      }
+      <Messaging contact={match.params.contact}/>
     </div>
   );
 };
