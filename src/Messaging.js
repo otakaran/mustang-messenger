@@ -28,6 +28,7 @@ const Messaging = ({ contact }) => {
           name="messageTo"
           placeholder="Enter email here..."
           value={contact}
+          required
         />
       </div>
     );
