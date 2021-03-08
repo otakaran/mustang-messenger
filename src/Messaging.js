@@ -18,8 +18,6 @@ import sendMessageFirebase from "./fire/sendMessageFire";
 //   );
 // }
 
-
-
 const Messaging = ({ contact }) => {
   const location = useLocation();
   console.log("LOCATION.PATHNAME: " + location.pathname)
@@ -54,7 +52,7 @@ const Messaging = ({ contact }) => {
   return (
     <div className="messaging-component">
       <Form id="messageForm" onSubmit={sendMessageFirebase}>
-      
+
         <MessageTo />
 
         <input
