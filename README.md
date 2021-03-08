@@ -9,6 +9,8 @@
 ## [UI Prototype](https://www.figma.com/file/5LOJUEDUx4DTKvp6bUhRLm/Mustang-Messenger-Prototype?node-id=0%3A1)
 Last Updated: 2/3/2021
 
+## [Class Diagram](https://github.com/otakaran/mustang-messenger/wiki/Class-Diagram), [Use Case Diagram](https://github.com/otakaran/mustang-messenger/wiki/Use-Case-Diagram)
+
 ## Development environment setup
 ### Style Guide
 - [https://airbnb.io/javascript/react/](https://airbnb.io/javascript/react/)
