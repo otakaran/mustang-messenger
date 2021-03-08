@@ -4,8 +4,6 @@ import Messaging from "./Messaging";
 
 const MessagesPage = () => {
   let match = useRouteMatch();
-  console.log("match: ", match);
-  console.log("contact: ", match.params.contact);
 
   return (
     <div className="messages-page">

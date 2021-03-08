@@ -21,10 +21,6 @@ const Contacts = () => {
     getContacts();
   }, [currentUser]);
 
-  const handleClick = () => {
-    console.log("Click");
-  }
-
   return (
     <div className="contacts-wrapper">
       <br/>
@@ -43,7 +39,7 @@ const Contacts = () => {
       <ListGroup>
         {contacts && contacts.map((contact, idx) => {
           return (
-            <ListGroup.Item key={idx} onClick={handleClick}>
+            <ListGroup.Item key={idx}>
               <Link to={`/messages/${contact}`}>{contact}</Link>
             </ListGroup.Item>
           )
