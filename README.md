@@ -6,10 +6,13 @@
 
 **Mustang Messenger is an instant messaging platform for users to communicate with each other. Users create unique profiles using their email and password. Each profile has a customizable contact list which the users can use to filter their messages and quickly communicate with other users of the application. Conversation history persists over time, allowing users to reference past messages.**
 
-## [UI Prototype](https://www.figma.com/file/5LOJUEDUx4DTKvp6bUhRLm/Mustang-Messenger-Prototype?node-id=0%3A1)
+
+## Project Design
+### [UI Prototype](https://www.figma.com/file/5LOJUEDUx4DTKvp6bUhRLm/Mustang-Messenger-Prototype?node-id=0%3A1)
 Last Updated: 2/3/2021
 
-## [Class Diagram](https://github.com/otakaran/mustang-messenger/wiki/Class-Diagram), [Use Case Diagram](https://github.com/otakaran/mustang-messenger/wiki/Use-Case-Diagram)
+### [(Wiki) Class Diagram](https://github.com/otakaran/mustang-messenger/wiki/Class-Diagram), [(Wiki) Use Case Diagram](https://github.com/otakaran/mustang-messenger/wiki/Use-Case-Diagram)
+
 
 ## Development environment setup
 ### Style Guide
@@ -28,3 +31,6 @@ If you are an admin please ensure you are given access to the development fireba
 - To run a development build of the project run ```npm install``` and then ```npm start```.
 - Open [http://localhost:3000](http://localhost:3000) to view it in the browser
 
+
+## Testing
+### [Testcases (Frontend and Backend)](https://docs.google.com/spreadsheets/d/1J-daHcUMOH5AEySXpuAp7gyb4XXN0cLMF7m33E2xtsA/edit?usp=sharing)
