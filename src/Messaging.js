@@ -4,7 +4,6 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import sendMessageFirebase from "./fire/sendMessageFire";
 
-=======
 // const messageToDefault = () => {
 //   return (
 //     <div>
@@ -53,7 +52,7 @@ const Messaging = ({ contact }) => {
   return (
     <div className="messaging-component">
       <Form id="messageForm" onSubmit={sendMessageFirebase}>
-      
+
         <MessageTo />
 
         <input
