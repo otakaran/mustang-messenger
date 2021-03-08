@@ -36,12 +36,6 @@
   width: 570px;
 }
 
-/*
-#logout {
-  display: none;
-}
-*/
-
 .signout-button {
   color: white;
 }
@@ -55,17 +49,3 @@
   display: inline-block;
   margin: 0 20px 0 -20px;
 }
-
-/* Debugging borders */
-/* .header {
-    border: solid red 2px;
-}
-.header-left {
-    border: solid blue 2px;
-}
-.header-middle {
-    border: solid black 2px;
-}
-.header-right {
-    border: solid green 2px;
-} */

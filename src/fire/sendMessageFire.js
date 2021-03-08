@@ -7,9 +7,6 @@ function sendMessageFirebase(event) {
   const data = new FormData(event.target);
   var messageTo = (data.get('messageTo'));
   var messageBody = (data.get('messageBody'));
-  console.log("Sending a message into db...")
-  console.log("messageTo: ", messageTo);
-  console.log("messageBody: ", messageBody);
 
   // Check if user exists, if they do add this user to current user contacts,
   // also add to the contacted user's contacts
