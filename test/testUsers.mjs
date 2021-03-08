@@ -1,4 +1,4 @@
-import { fire } from "../src/fire/Fire";
+import { fire } from "../src/fire/Fire.js";
 import { create_user_in_db, read_user_from_db } from "../src/fire/userProfiles";
 
 // Creates a new user, reads its user profile, then deletes it
@@ -23,3 +23,5 @@ function userTest1() {
       console.error(error);
     });
 }
+
+userTest1();
