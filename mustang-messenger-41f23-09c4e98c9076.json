@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "mustang-messenger-41f23",
+  "private_key_id": "09c4e98c9076e05b264c2a6d6d12e65d65985d44",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDQpbTsOz0SmGT7\nd5iFTQyQ0folWmEOAUls65vEMxPXDW674KRmsSIbvSTi7Sq0PnJlu7inzP+9JIyw\nbo8iQrBUemeH8BUZemKlI3R4cISsNA6U66Fwhz6Xc9wBNXI7PpmqKTL+dGZWNQRz\nEz1Ic9WG15PiQ6OvNwzSeluniKDGBo0ojzoymMUaiZm6Slrmz5T/7oF5wzUmqV8Z\nD6suc8VhVdfqCjcX1gWJjbY0o0QZB3iHHiGu0JruWyTn7dkVGMfvuVsJzCzH60zP\ntHAeE9B2KIwFf6ogH1wPkuoVwuXO3QmQEG8HiewNFskgzAtpFcjNE3cJMvdyvxbP\ncPD5VQl1AgMBAAECggEASsXf2Tr/j47yvZXmIHt00d+WTFWf65N1e2XSTFVbulmT\nghwm/rBjP1qhAfwpri+k8qV8LxKN4fxbuQzeGdKZe6TkPnjBLwDHolPa9SCpw0bi\npObu07N8MG2yffJn7ihojG04W61eUW2tmwndj/4HG0xdsJw56FyLqVB1UUxrBZwE\nLfBQugaJpcMbyNk9cY/dzzC+cjRwQyPisw0UTqNUNq8EyH4TKkDqRJrkyHntwDZR\niVTf1vjbSjXyBMxjqokIDJVQLOj4oFYgkl0gHoVzTO9JV96frE0Sgj3NTM9pIsYR\noFjb8/p4qoFqiyCL3hHTWnqAkkY2n7T7eK/X1D4bTwKBgQD73EDkYSZZE2waPie7\nE/tA31nXjruMI30VIrnzJhh1TvxrLUPlysLwEepERCGul9izOeU9RZnAPM11Z97b\n6/f8anRtajNZu/AkOz82K07wQEfnSZZEeJC8XG3DtP5M1KipX5S41dxDcal07lum\nlYdtQqpgh9rz9l8KiHRg90SwIwKBgQDUE6BualvFKIVDqrXNXCXtMC2IdiKro26r\nwbOlCYhK8XIMRfp7kTV01epKQSK/RBaPMs6ulAKwpumhBF+IsNnq6TY0giNxdlhE\nKugjddQT4Iv/WTVNqio7iZHQ2G4TLelQl7MmkXCn54NFEq5nQBbq5H5+powktaRZ\noF4a+aIthwKBgQCVxDyGUcrW7zi6RjmkAlbHFcm757FYvQW1WsgOcZnbsBNjvDAC\n5laTIWQYIheRVdRTh1rs24V5De7zIMgiKKh3XepL4foVIy/Cq8SD9q7jKKZZP6Xu\no28VwzS2SttpXo/I4AB1BR8Mr/sfgFnZrlMwwpLEAiVOKzQK9GeX/ZHH1wKBgBq5\n2nbvul7vS1QKuFyH51OrxaEz2gytTO4iPARpXh6rrMa1LurRkt4Fc0AmUz2tU/Z5\n3agMiQZAEqMzDOMJ/nxnJWiameLbmiYFDjohyDc1Dg+A64G9FxNns9OQ4tZR69w3\nMeGDZKIUP+u9ffMPFZRGdVZ6oKCjr3GIDzPxD6oTAoGAMF+lbwAqyrTTKvRmNxTK\nbpNw2QPBUGz9ivNFsFtrpNOnnPeAmez+eAOoeD3nMWNtY3+cvUN6FYmnKGSDE/SF\nZI+iD6A4AYYyvFWgYx4vZ+y/9+T29oGtGmr2Yy2qExfSS+O0BOA/kkE1gbcefGzH\nWU5URXpksGq46Iq0MXCzlJI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "mustang-messenger-41f23@appspot.gserviceaccount.com",
+  "client_id": "109621354836990617620",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mustang-messenger-41f23%40appspot.gserviceaccount.com"
+}

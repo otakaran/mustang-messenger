@@ -40,7 +40,6 @@ function sendMessageFirebase(event) {
             contacts: fire.firestore.FieldValue.arrayUnion(messageTo)
           })
 
-
           // Send message into the db
           db.collection("messages").add({
             from: fire.auth().currentUser.email,

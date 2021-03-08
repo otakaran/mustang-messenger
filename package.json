@@ -24,7 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
+    "test": "mocha ./fire/test/test.js --reporter spec",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

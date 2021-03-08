@@ -37,21 +37,3 @@ export async function read_user_from_db(user) {
     console.log("No such document");
   }
 }
-
-/* Deletes a user from the user_profiles collection.
- *
- * user: The user object to delete from the collection.
- *
- * Returns: true upon a successful deletion; false otherwise.
- */
-export function delete_user_from_db(user) {
-  const docRef = db.collection("user_profiles").doc(user.email);
-
-  docRef.delete().then(() => {
-    console.log("Document successfully deleted!");
-    return true;
-  }).catch((error) => {
-    console.error("Error removing document: ", error);
-    return false;
-  });
-}
