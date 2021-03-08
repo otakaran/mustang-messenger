@@ -18,7 +18,11 @@ All plugins can be installed from the VS Code extension market:
 - Prettier - Code formatter     | By Prettier
 - ESLint    | By Dirk Baeumer
 
+### Access to Backend Database
+If you are an admin please ensure you are given access to the development firebase by one of the other developers. Alternativly you can use your own instance of firebase, simply overwrite the Client ID setting in /src/fire/Fire.js
+
 ### Other Instructions to Run Project
 - Clone this reposity from GitHub
 - To run a development build of the project run ```npm install``` and then ```npm start```.
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser
 
